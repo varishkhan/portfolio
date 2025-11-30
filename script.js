@@ -4,8 +4,7 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
+        if (elementTop < windowHeight - 100) {
             reveals[i].classList.add("active");
         }
     }
@@ -14,22 +13,17 @@ window.addEventListener("scroll", reveal);
 reveal();
 
 // 2. EMAIL COPY FUNCTION
+// This handles the footer link. The Hire/WhatsApp buttons use standard links now.
 function copyEmail(btn) {
-    [cite_start]// [cite: 3]
     const email = "varishkhan2002@gmail.com";
     
-    // Try to copy to clipboard
-    navigator.clipboard.writeText(email).then(() => {
-        // Success feedback
-        const originalText = btn.innerText;
-        btn.innerText = "✅ Email Copied!";
-        
-        // Reset text after 2 seconds
-        setTimeout(() => {
-            btn.innerText = originalText;
-        }, 2000);
-    }).catch(err => {
-        // Fallback: Just open mailto if copy fails
+    // Modern Copy
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Email copied to clipboard: " + email);
+        });
+    } else {
+        // Fallback for older browsers
         window.location.href = "mailto:" + email;
-    });
+    }
 }
