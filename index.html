@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Varish Khan | Software & AI Engineer</title>
+    <meta name="description" content="Portfolio of Varish Khan, Full Stack Java & AI Engineer.">
+    <meta property="og:title" content="Varish Khan | Software & AI Engineer">
+    <meta property="og:description" content="Full Stack Java & AI Engineer. View my projects and resume.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="floating-nav-container">
+        <nav class="glass-nav">
+            <div class="logo">
+                <div class="live-dot"></div>
+                VARISH KHAN
+            </div>
+            <div class="nav-links">
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Edu</a>
+            </div>
+            <a onclick="copyEmail(this)" class="hire-btn">Hire Me</a>
+        </nav>
+    </div>
+
+    <header class="container hero reveal active">
+        <h1>Full Stack Java &<br><span style="color: var(--accent);">AI Engineer.</span></h1>
+        <p>
+            Bridging the gap between robust Enterprise Java backends and cutting-edge Generative AI. 
+            Currently pursuing M.Tech in AIML at Oriental Institute of Science and Technology.
+        </p>
+        <div class="hero-buttons">
+            <a href="resume.pdf" download="Varish_Khan_Resume.pdf" class="hero-btn-primary">Download Resume ↓</a>
+            <a onclick="copyEmail(this)" class="hero-btn-outline">Get in Touch</a>
+        </div>
+    </header>
+
+    <section id="projects" class="container">
+        <span class="section-title reveal">Selected Works</span>
+        <div class="grid-2">
+            
+            <div class="card reveal">
+                <div>
+                    <h3>AI-Enhanced Quiz Platform</h3>
+                    <p>
+                        A dynamic JavaFX application integrated with Generative AI. It reduces content creation time by automatically generating high-quality question banks.
+                    </p>
+                    <a href="#" class="project-link">View Source Code <span>↗</span></a>
+                </div>
+                <div class="tag-container">
+                    <span class="tag">JavaFX</span>
+                    <span class="tag ai">Generative AI</span>
+                    <span class="tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="card reveal" style="transition-delay: 0.1s;">
+                <div>
+                    <h3>Student Management System</h3>
+                    <p>
+                        A robust desktop application using Java & JDBC. Engineered AI-optimized database queries that boosted data retrieval performance by 30%.
+                    </p>
+                    <a href="#" class="project-link">View Source Code <span>↗</span></a>
+                </div>
+                <div class="tag-container">
+                    <span class="tag">Java</span>
+                    <span class="tag">JDBC</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag ai">AI Optimization</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <span class="section-title reveal">Technical Expertise</span>
+        <div class="grid-2">
+            <div class="card reveal">
+                <h3 style="font-size: 1.2rem;">Core Engineering</h3>
+                <p style="margin-bottom: 16px;">Building scalable, secure backend architectures.</p>
+                <div class="tag-container">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Microservices</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+            <div class="card reveal" style="border-color: var(--accent); transition-delay: 0.1s;">
+                <h3 style="font-size: 1.2rem; color: var(--accent);">AI & Future Tech</h3>
+                <p style="margin-bottom: 16px;">Integrating intelligence into software.</p>
+                <div class="tag-container">
+                    <span class="tag ai">Generative AI</span>
+                    <span class="tag ai">Prompt Engineering</span>
+                    <span class="tag ai">ML Concepts</span>
+                    <span class="tag ai">Python</span>
+                    <span class="tag ai">GitHub Copilot</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="container">
+        <span class="section-title reveal">Education History</span>
+        <div style="margin-bottom: 80px;">
+            <div class="edu-item reveal">
+                <div>
+                    <div class="edu-title">Master of Technology (M.Tech)</div>
+                    <div class="edu-sub">Artificial Intelligence & Machine Learning</div>
+                    <div class="edu-sub">Oriental Institute of Science and Technology</div>
+                </div>
+                <div class="edu-date">2024 — Present</div>
+            </div>
+            <div class="edu-item reveal">
+                <div>
+                    <div class="edu-title">Bachelor of Engineering (B.E.)</div>
+                    <div class="edu-sub">Computer Science & Engineering</div>
+                    <div class="edu-sub">Rabindranath Tagore University (CGPA: 8.41)</div>
+                </div>
+                <div class="edu-date">2019 — 2023</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="reveal">
+        <div class="container">
+            <h2>Let's build something scalable.</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                Ready to contribute as a SDE or AI Engineer.
+            </p>
+            <a onclick="copyEmail(this)" class="contact-link">varishkhan2002@gmail.com</a>
+            <div style="margin-top: 40px; color: var(--text-secondary); font-size: 0.9rem;">
+                Bhopal, Madhya Pradesh
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
