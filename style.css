@@ -41,7 +41,9 @@ section { scroll-margin-top: 140px; }
     pointer-events: none;
 }
 
+/* Desktop: Top */
 @media (min-width: 769px) { .floating-nav-container { top: 20px; padding: 0 20px; } }
+/* Mobile: Bottom */
 @media (max-width: 768px) { .floating-nav-container { bottom: 20px; padding: 0 15px; } }
 
 .glass-nav {
