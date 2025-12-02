@@ -14,7 +14,7 @@ reveal();
 
 // 2. TYPEWRITER EFFECT
 const textElement = document.querySelector(".typing-text");
-const texts = ["Robust Java Systems.", "Generative AI Models.", "Scalable Software."];
+const texts = ["Scalable Java Backends.", "Intelligent AI Models.", "Future-Ready Software."]; 
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -32,31 +32,31 @@ let letter = "";
     if (letter.length === currentText.length) {
         count++;
         index = 0;
-        setTimeout(type, 2000); // Wait 2 seconds before next word
+        setTimeout(type, 2000);
     } else {
-        setTimeout(type, 100); // Speed of typing
+        setTimeout(type, 100);
     }
 })();
 
-
-// 3. EMAIL COPY FUNCTION
-// This is used for the footer link
+// 3. EMAIL COPY FUNCTION (RESTORED AS REQUESTED)
 function copyEmail(btn) {
-    const email = "varishkhan2002@gmail.com";
+    const email = "varishkhan2002@gmail.com"; // Source: 3
     
+    // Try Modern Method first
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(email).then(() => {
+            // Success! Change text temporarily
             const originalText = btn.innerText;
             btn.innerText = "✅ Email Copied!";
             setTimeout(() => {
                 btn.innerText = originalText;
             }, 2000);
         }).catch(err => {
+            // If blocked, fallback to prompt
             prompt("Copy this email:", email);
         });
     } else {
+        // Fallback for older browsers
         prompt("Copy this email:", email);
     }
 }
-
-
