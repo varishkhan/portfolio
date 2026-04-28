@@ -264,30 +264,6 @@ nav.sc { background: rgba(5,5,8,.95); backdrop-filter: blur(20px); border-bottom
 .nhire { background: var(--ac); color: #fff; padding: .55rem 1.4rem; border-radius: 100px; font-family: var(--f); font-size: .82rem; font-weight: 600; text-decoration: none; transition: transform .2s, box-shadow .2s; }
 .nhire:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124,111,247,.4); }
 
-/* ── RESUME BUTTON (Nav) ── */
-.nresume {
-  background: transparent;
-  color: var(--ac2);
-  border: 1px solid rgba(124,111,247,.4);
-  padding: .5rem 1.2rem;
-  border-radius: 100px;
-  font-family: var(--m);
-  font-size: .78rem;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all .2s;
-  cursor: pointer;
-}
-.nresume:hover {
-  background: rgba(124,111,247,.12);
-  border-color: var(--ac);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
 /* ── HERO ── */
 #hero { min-height: 100vh; display: flex; align-items: center; padding: 0 3rem; position: relative; z-index: 1; }
 .hi { max-width: 1100px; margin: 0 auto; width: 100%; }
@@ -316,50 +292,9 @@ nav.sc { background: rgba(5,5,8,.95); backdrop-filter: blur(20px); border-bottom
 .bo { background: transparent; color: #fff; border: 1px solid var(--bd); padding: .88rem 2.2rem; border-radius: 8px; font-family: var(--f); font-size: .9rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color .2s, transform .2s; }
 .bo:hover { border-color: rgba(124,111,247,.5); transform: translateY(-2px); }
 
-/* ── RESUME DOWNLOAD BUTTON (Hero) ── */
-.br {
-  background: transparent;
-  color: var(--ac2);
-  border: 1px solid rgba(124,111,247,.45);
-  padding: .88rem 2.2rem;
-  border-radius: 8px;
-  font-family: var(--f);
-  font-size: .9rem;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all .25s;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-.br::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(124,111,247,.12), rgba(167,139,250,.06));
-  opacity: 0;
-  transition: opacity .25s;
-}
-.br:hover {
-  border-color: var(--ac);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(124,111,247,.2);
-}
-.br:hover::before { opacity: 1; }
-.br svg { flex-shrink: 0; transition: transform .25s; }
-.br:hover svg { transform: translateY(2px); }
-
-/* ── RESUME PILL (Social row) ── */
+.hs { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fu .8s ease .95s forwards; }
 .sp { color: var(--mu); text-decoration: none; font-size: .78rem; font-family: var(--m); border: 1px solid var(--bd); border-radius: 100px; padding: 6px 16px; transition: all .2s; }
 .sp:hover { color: #fff; border-color: var(--ac); background: rgba(124,111,247,.1); }
-.sp.resume-pill { color: var(--ac2); border-color: rgba(124,111,247,.35); }
-.sp.resume-pill:hover { color: #fff; border-color: var(--ac); background: rgba(124,111,247,.12); }
-
-.hs { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fu .8s ease .95s forwards; }
 
 @keyframes fu { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 
@@ -481,7 +416,6 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
 @media (max-width: 640px) {
   .skg { grid-template-columns: 1fr; }
   .nul { display: none; }
-  .nresume { display: none; }
   footer { flex-direction: column; gap: .5rem; text-align: center; }
 }
 </style>
@@ -507,14 +441,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
     <li><a href="#projects">projects</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:.75rem;">
-    <!-- ↓ RESUME BUTTON IN NAV — replace href with your actual resume PDF link -->
-    <a href="Varish_Khan_Resume.pdf" download="Varish_Khan_Resume.pdf" class="nresume">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Resume
-    </a>
-    <a href="#contact" class="nhire">Hire Me</a>
-  </div>
+  <a href="#contact" class="nhire">Hire Me</a>
 </nav>
 
 <!-- HERO -->
@@ -526,11 +453,6 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
     <div class="hb">
       <a href="#projects" class="bp">View Projects ↓</a>
       <a href="https://wa.me/919171567434" target="_blank" class="bw">WhatsApp Me</a>
-      <!-- ↓ RESUME DOWNLOAD BUTTON IN HERO — replace href with your actual resume PDF link -->
-      <a href="Varish_Khan_Resume.pdf" download="Varish_Khan_Resume.pdf" class="br">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Resume
-      </a>
       <a href="#contact" class="bo">Get in Touch →</a>
     </div>
     <div class="hs">
@@ -538,8 +460,6 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
       <a href="#contact" class="sp">@ Email</a>
       <a href="https://github.com/varishkhan" target="_blank" class="sp">⌘ GitHub</a>
       <a href="https://venique.org" target="_blank" class="sp">◈ Venique</a>
-      <!-- ↓ RESUME PILL IN SOCIAL ROW -->
-      <a href="Varish_Khan_Resume.pdf" download="Varish_Khan_Resume.pdf" class="sp resume-pill">↓ Resume</a>
     </div>
   </div>
 </section>
@@ -551,12 +471,12 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
       <div class="rv">
         <div class="slb">about_me.json</div>
         <div class="stit">Developer.<br>Instructor.<br><span>Researcher.</span></div>
-        <p class="ap">I'm a <strong>Full Stack Developer</strong> at Venique IT Solution — a startup in Mandideep, Bhopal where I've been part of the founding team since June 2024, building real products across web, SaaS, and AI automation.</p>
+        <p class="ap">I'm a <strong>Full Stack Developer</strong> at Venique IT Solution — a startup in Mandideep, Bhopal where I've been part of the founding team since May 2025, building real products across web, SaaS, and AI automation.</p>
         <p class="ap">I hold an <strong>M.Tech in AI/ML</strong> from OIST Bhopal — with thesis work on real-time contactless HCI using MediaPipe, LSTM, and CNN deep learning architectures.</p>
         <p class="ap">Before this, I spent a year at <strong>FXT Institute</strong> teaching Java Full Stack and Python — giving me a depth that only comes from explaining things clearly to others.</p>
       </div>
       <div class="sg rv">
-        <div class="sb"><div class="sn">2+</div><div class="sl">Years industry experience</div></div>
+        <div class="sb"><div class="sn">1+</div><div class="sl">Years industry experience</div></div>
         <div class="sb"><div class="sn">3+</div><div class="sl">Production projects shipped</div></div>
         <div class="sb"><div class="sn">AI/ML</div><div class="sl">M.Tech — OIST Bhopal</div></div>
         <div class="sb"><div class="sn">8.41</div><div class="sl">B.E. CGPA — RNTU</div></div>
@@ -608,7 +528,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
           <span class="tro">Full Stack Developer</span>
           <span class="tco">@ Venique IT Solution</span>
           <span class="tbg">● ACTIVE</span>
-          <span class="tdt">June 2024 – Present</span>
+          <span class="tdt">May 2025 – Present</span>
         </div>
         <ul class="tds">
           <li>Building and maintaining full stack web applications using React.js, Node.js, and Python for real clients across multiple domains.</li>
@@ -624,7 +544,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
           <span class="tp">varish@dev</span><span class="tcd">$</span>
           <span class="tro">Java &amp; Python Instructor</span>
           <span class="tco">@ FXT Institute</span>
-          <span class="tdt">June 2023 – June 2024</span>
+          <span class="tdt">March 2024 – April 2025</span>
         </div>
         <ul class="tds">
           <li>Taught Python fundamentals and Java Full Stack development (Spring Boot, JDBC, REST APIs) through a project-based curriculum.</li>
@@ -650,6 +570,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
         <div class="pti">Real-Time Contactless HCI System</div>
         <div class="pd">Real-time hand gesture recognition using MediaPipe landmark detection and LSTM/CNN architectures — optimized for live inference across varied conditions.</div>
         <div class="ptg"><span class="ptag">Python</span><span class="ptag">MediaPipe</span><span class="ptag">LSTM</span><span class="ptag">CNN</span><span class="ptag">Deep Learning</span></div>
+        <!-- PASTE YOUR GITHUB REPO LINK BELOW — replace # with your actual repo URL -->
         <a href="#" target="_blank" class="psrc">↗ View Source Code</a>
       </div>
 
@@ -659,6 +580,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
         <div class="pti">JobBot — AI Interview Assistant</div>
         <div class="pd">Full-stack microservices app with Flask-based AI resume scanner providing real-time keyword scoring. Bridges React, Spring Boot, and Python AI via distributed REST APIs.</div>
         <div class="ptg"><span class="ptag">Spring Boot</span><span class="ptag">React.js</span><span class="ptag">Flask</span><span class="ptag">MySQL</span><span class="ptag">REST APIs</span></div>
+        <!-- PASTE YOUR GITHUB REPO LINK BELOW — replace # with your actual repo URL -->
         <a href="#" target="_blank" class="psrc">↗ View Source Code</a>
       </div>
 
@@ -668,6 +590,7 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
         <div class="pti">Student Management System</div>
         <div class="pd">Robust desktop app with normalized MySQL schema and optimized SQL queries — 30% performance gain via indexing. Fully validated with JUnit test cases.</div>
         <div class="ptg"><span class="ptag">Java</span><span class="ptag">JDBC</span><span class="ptag">MySQL</span><span class="ptag">JUnit</span></div>
+        <!-- PASTE YOUR GITHUB REPO LINK BELOW — replace # with your actual repo URL -->
         <a href="#" target="_blank" class="psrc">↗ View Source Code</a>
       </div>
 
@@ -715,11 +638,6 @@ footer { padding: 1.8rem 3rem; border-top: 1px solid var(--bd); display: flex; j
         <a href="https://linkedin.com/in/varish-khan" target="_blank" class="clk">in/ LinkedIn</a>
         <a href="https://github.com/varishkhan" target="_blank" class="clk">⌘ GitHub</a>
         <a href="https://venique.org" target="_blank" class="clk">◈ Venique IT Solution</a>
-        <!-- ↓ RESUME LINK IN CONTACT SECTION -->
-        <a href="Varish_Khan_Resume.pdf" download="Varish_Khan_Resume.pdf" class="clk">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Resume
-        </a>
       </div>
     </div>
   </div>
